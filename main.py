@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
-import os
+import os, random, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import random
+
 
 class LinkedInConnections:
 
@@ -17,6 +17,7 @@ class LinkedInConnections:
 
   def connections(self):
     self.login()
+    time.sleep(1)
     self.driver.get(self.find_connections)
 
     connections = set()
