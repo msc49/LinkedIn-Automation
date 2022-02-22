@@ -35,7 +35,7 @@ class LinkedInConnections:
   def accept_cookies(self):
     try:
       
-      accept_cookies = self.driver.find_element_by_xpath("//*[@id="artdeco-global-alert-container"]/div/section/div/div[2]/button[2]").click()
+      accept_cookies = self.driver.find_element_by_xpath('//*[@id="artdeco-global-alert-container"]/div/section/div/div[2]/button[2]').click()
     except:
       print("cookies already accepted")
 
