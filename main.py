@@ -21,8 +21,11 @@ class LinkedInConnections:
     self.driver.get(self.find_connections)
 
     connections = set()
+    all_add_connection_buttons = self.driver.find_elements_by_class_name("artdeco-button__text")
+    connections.add(all_add_connection_buttons)
+    print(connections)
     
-
+    
 
   def login(self):
     self.driver.get(self.login_page) # go to login page
