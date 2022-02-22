@@ -21,4 +21,10 @@ class LinkedInConnections:
     email_box = self.driver.find_element_by_id("username")
     load_dotenv()
     input_email = email_box.send_keys(os.getenv('EMAIL'))
-    print(self.find_connections)
+
+    password_box = self.driver.find_element_by_id("password")
+    input_password = password_box.send_keys(os.getenv('PASSWORD'))
+
+    login_button = self.driver.find_element_by_xpath('//*[@id="organic-div"]/form/div[3]/button')
+    click_login = login_button.click()
+    
