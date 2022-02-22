@@ -18,6 +18,7 @@ class LinkedInConnections:
 
   def login(self):
     self.driver.get(self.login_page) # go to login page
+    self.accept_cookies()
     email_box = self.driver.find_element_by_id("username")
     load_dotenv()
     input_email = email_box.send_keys(os.getenv('EMAIL'))
