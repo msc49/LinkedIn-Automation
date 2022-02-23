@@ -63,6 +63,7 @@ class LinkedInConnections:
 
 
 
-
+linkedin = LinkedInConnections()
+linkedin.connections()
 
     
