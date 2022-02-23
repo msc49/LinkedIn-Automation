@@ -64,7 +64,5 @@ class LinkedInConnections:
 
 
 
-t = LinkedInConnections()
-
 
     
