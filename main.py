@@ -21,7 +21,7 @@ class LinkedInConnections:
     self.driver.get(self.find_connections)
     time.sleep(2.5)
 
-    all_buttons = self.driver.find_element_by_tag_name("button")
+    all_buttons = self.driver.find_elements_by_tag_name("button")
     connect_buttons = [btn for btn in all_buttons if btn.text == "Connect"]
 
     for btn in connect_buttons:
@@ -65,5 +65,6 @@ class LinkedInConnections:
 
 
 t = LinkedInConnections()
+
 
     
