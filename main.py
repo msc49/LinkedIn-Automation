@@ -19,11 +19,21 @@ class LinkedInConnections:
     self.login()
     time.sleep(1)
     self.driver.get(self.find_connections)
+    time.sleep(2.5)
 
-    connections = set()
-    all_add_connection_buttons = self.driver.find_elements_by_class_name("artdeco-button__text")
-    connections.add(all_add_connection_buttons)
-    print(connections)
+    all_buttons = self.driver.find_element_by_tag_name("button")
+    connect_buttons = [btn for btn in all_buttons if btn.text == "Connect"]
+
+    for btn in connect_buttons:
+      # we will not use btn.click() because although it will work for our first button, the ones after will be intercepted through the blockers linkedin has. Therefore we will click using Javascript
+      self.driver.execute_script("arguments[0].click();", btn)
+      time.sleep(3)
+      send = self.driver.find_element_by_xpath("//button[@aria-label='Send now']")
+      self.driver.execute_script("arguments[0].click();", send)
+      close = self.driver.find_element_by_xpath("//button[@aria-label='Dismiss']")
+      self.driver.execute_script("arguments[0].click();", close)
+      time.sleep(1.7)
+
     
     
 
@@ -50,5 +60,10 @@ class LinkedInConnections:
     except:
       print("cookies already accepted")
 
+
+
+
+
+t = LinkedInConnections()
 
     
