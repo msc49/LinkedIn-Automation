@@ -40,6 +40,8 @@ class LinkedInConnections:
         self.driver.execute_script("arguments[0].click();", close)
         time.sleep(1.7)
 
+    self.driver.quit()
+
       
 
       
