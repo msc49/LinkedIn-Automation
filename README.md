@@ -8,6 +8,10 @@ The file randomly selects one of the following roles: software-engineer, full-st
 
 It then only looks for connects in London (where I am based) and people who went to my university to add. 
 
+NEW FEATURE:
+
+It will add all the people in the first five pages (not anymore because we do noy annoy LinkedIn with too many requests)
+
 
 ## Prerequisites
 
